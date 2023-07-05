@@ -1,0 +1,145 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/2012/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="content-type" content="text/html"; charset="utf-8" />
+<title>中传课程评价系统</title>
+<link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/mhDoLbDldZc3qpsJHpLogda//BVZbgYuw6kof4u2FrCedxOtgRZDTHgHUhOCVim" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-ep+dxp/oz2RKF89ALMPGc7Z89QFa32C8Uv1A3TcEK8sMzXVysblLA3+eJWTzPJzT" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.js"></script>
+<style type="text/css">
+</style>
+</head>
+<body>
+
+	<!-- end #header -->
+	<div id="menu">
+		<ul>
+			<li class="current_page_item"><a href="Index.html">首页</a></li>
+			<li><a href="我有好多话.html">课程红黑榜</a></li>
+			<li><a href="我也想回答.html">我也想回答</a></li>
+			<li><a href="我有好多课.html">我有好多课</a></li>
+		</ul>
+	</div>
+
+	<div id="carouselExampleInterval" class="carousel slide pointer-event" data-bs-ride="carousel">
+	  <div class="carousel-inner">
+	    <div class="carousel-item active" data-bs-interval="10000">
+
+	      <div class="carousel-caption d-none d-md-block">
+
+	      </div>
+	    </div>
+
+	    </div>
+	  </div>
+	  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	    <span class="visually-hidden">Previous</span>
+	  </button>
+	  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+	    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	    <span class="visually-hidden">Next</span>
+	  </button>
+	</div>
+	<div id="banner"><img src="images/cuc.png" width="1000" height="361"  class="img-fluid" alt="" /></div>
+    <div class="copyrights">Collect from <a href="http://www.hoopchina.com/"  title="Design by Matthew.">Design by Matthew.</a></div>
+
+	<div id="welcome">
+		<h2 class="title"><a href="#">欢迎使用 </a></h2>
+		<div class="entry">
+			<p>欢迎使用中传课程评价系统，我们将根据往届收集的课程数据，建立一个中传校园课程评价共享体系。</p>
+		</div>
+	</div>
+	<div id="three-columns">
+		<div id="column1">
+			<h2>课程红黑版</h2>
+			<p>这里可以查看CUCer最爱的课程。</p>
+			<p><a href="我有好多话.html" class="link-style">点击进入</a></p>
+		</div>
+		<div id="column2">
+			<h2>我也想回答</h2>
+			<p>学生登录后可以对课程进行评价。</p>
+			<p><a href="我也想回答.html" class="link-style">点击进入</a></p>
+		</div>
+		<div id="column3">
+			<h2>我有好多课</h2>
+			<p>选课同学可以在页面看到往届同学对课程的相关评价。</p>
+			<p><a href="我有好多课.html" class="link-style">点击进入</a></p>
+		</div>
+	</div>
+	<div id="two-columns">
+		<div id="column1">
+					<h2>中传通识课每日热门榜单</h2>
+			  <div id="chart"></div>
+
+		  <br><br><br>
+		  <script>
+		    var chart = c3.generate({
+		      bindto: '#chart',
+		      data: {
+		        columns: [
+		          ['课程每日搜索次数', 80, 75, 65, 64, 62, 60, 58, 56, 53, 50]
+		        ],
+		        type: 'line'
+		      },
+		      axis: {
+		        x: {
+		          type: 'category',
+		          categories: ['世界政治与全球问题', '研究设计与论文写作', '服饰与传播', '设计思维创新与实践', '数字视频编辑与创作', '算法入门与实践应用', '读懂马克思', '观星', '文化产业的“三创”战略', '新媒体创业与创新']
+		        },
+		        y: {
+		          max: 100,
+		          label: {
+		            text: '课程每日搜索次数',
+		            position: 'outer-middle'
+		          }
+		        }
+		      }
+		    });
+		  </script>
+			</div>
+
+ <p  style="text-align:center;"><a href="我有好多课.html" class="link-style2">查看更多课程评价</a></p>
+</div>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12 col-md-4" style="padding-left:3rem;">
+					<h6 class="pt-3">
+						<a href="index.html">首页</a>
+						<a href="我有好多话.html">课程红黑榜</a>
+						<a href="我也想回答.html">我也想回答</a>
+						<a href="我有好多课.html">我有好多课</a>
+					</h6>
+					<h6 style="color:#c9c2a79b ;">中传课程评价系统</h6><br>
+				</div>
+				<div class="col-md-4 pt-3 pb-3" style="padding-left:3rem;">
+					<h6 style="padding-bottom:1rem"><i class="bi bi-geo-alt-fill"><span style="padding-left: 1rem;">定福庄东街一号：中国传媒大学</span></i></h6>
+					<h6 style="padding-bottom:1rem"><i class="bi bi-telephone-fill"></i><span style="padding-left: 1rem;">国家“双一流”建设高校</span></h6>
+					<h6 style="padding-bottom:1rem"><i class="bi bi-envelope-fill"><span style="padding-left: 1rem;">国家“211工程”重点建设高校</span></i></h6>
+
+				</div>
+				<div class="col-md-4 pt-3 pb-4" style="padding-left:3rem;padding-right:3rem;">
+					<h5>关键词</h5>
+					<h6 style="color:#c9c2a79b ;padding-bottom: 1rem;font-family:SimSun">真实、可靠、有效、互助。</h6>
+
+			</div>
+		</div>
+	</div></footer>
+	<!-- end #footer -->
+</body>
+</html>
