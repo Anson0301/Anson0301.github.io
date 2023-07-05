@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/2012/xhtml">
+<head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S1TYLLXJ6K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S1TYLLXJ6K');
+</script>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="content-type" content="text/html"; charset="utf-8" />
+<title>中传课程评价系统</title>
+<link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/mhDoLbDldZc3qpsJHpLogda//BVZbgYuw6kof4u2FrCedxOtgRZDTHgHUhOCVim" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-ep+dxp/oz2RKF89ALMPGc7Z89QFa32C8Uv1A3TcEK8sMzXVysblLA3+eJWTzPJzT" crossorigin="anonymous"></script>
+<style type="text/css">
+</style>
+</head>
+
+<body>
+
+	<div id="menu">
+		<ul>
+			<li class="current_page_item"><a href="Index.html">首页</a></li>
+			<li><a href="我有好多话.html">课程红黑榜</a></li>
+			<li><a href="我也想回答.html">我也想回答</a></li>
+			<li><a href="我有好多课.html">我有好多课</a></li>
+		</ul>
+	</div>
+
+<br>
+<div class="d-grid gap-2 col-9 mx-auto">
+
+    <h4 style="text-align: center;">请对课程做出评价</h4>
+
+		<form>
+
+  <div class="mb-3">
+		<label for="exampleInputEmail1" class="form-label">课程名称：</label>
+	    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+
+</form>
+
+<br>
+<label for="Range1" class="form-label">请滑动拉条对教师评分（最高5分）</label>
+
+分数：<span id="scoreDisplay1" class="score1" style="right=0">3</span>
+<input type="range" class="form-range" min="0" max="5" step="0.5" id="Range1">
+
+<script>
+			 var rangeInput1 = document.getElementById("Range1");
+			 var scoreDisplay1 = document.getElementById("scoreDisplay1");
+
+			 rangeInput1.addEventListener("input", function() {
+					 scoreDisplay1.textContent = rangeInput1.value;
+			 });
+	 </script>
+<br>
+<br>
+	 <label for="Range2" class="form-label">请滑动拉条对授课内容评分（最高5分）</label>
+
+ 	分数： <span id="scoreDisplay2" class="score2">3</span>
+	 <input type="range" class="form-range" min="0" max="5" step="0.5" id="Range2">
+
+	 <script>
+	 			 var rangeInput2 = document.getElementById("Range2");
+	 			 var scoreDisplay2 = document.getElementById("scoreDisplay2");
+
+	 			 rangeInput2.addEventListener("input", function() {
+	 					 scoreDisplay2.textContent = rangeInput2.value;
+	 			 });
+	 	 </script>
+		 <br>
+		 <br>
+		 	 <label for="Range3" class="form-label">请滑动拉条对出勤要求评分（最高5分）</label>
+
+		  	分数： <span id="scoreDisplay3" class="score3">3</span>
+		 	 <input type="range" class="form-range" min="0" max="5" step="0.5" id="Range3">
+
+		 	 <script>
+		 	 			 var rangeInput3 = document.getElementById("Range3");
+		 	 			 var scoreDisplay3 = document.getElementById("scoreDisplay3");
+
+		 	 			 rangeInput3.addEventListener("input", function() {
+		 	 					 scoreDisplay3.textContent = rangeInput3.value;
+		 	 			 });
+		 	 	 </script>
+				 <br>
+				 <br>
+					 <label for="Range3" class="form-label">请滑动拉条对结课方式评分（最高5分）</label>
+
+						分数： <span id="scoreDisplay4" class="score4">3</span>
+					 <input type="range" class="form-range" min="0" max="5" step="0.5" id="Range4">
+
+					 <script>
+								 var rangeInput4 = document.getElementById("Range4");
+								 var scoreDisplay4 = document.getElementById("scoreDisplay4");
+
+								 rangeInput4.addEventListener("input", function() {
+										 scoreDisplay4.textContent = rangeInput4.value;
+								 });
+						 </script>
+						 <br>
+		 <div class="form-floating">
+		   <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+		   <label for="floatingTextarea2">请写下你对课程的评价</label>
+		 </div>
+		 <br>
+		 <div class="d-grid gap-2 col-6 mx-auto">
+  <button class="btn btn-primary" type="button">提交评价</button>
+</div>
+</div>
+
+
+
+
+
+
+<!-- Footer -->
+<footer>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 col-md-4" style="padding-left:3rem;">
+				<h6 class="pt-3">
+					<a href="index.html">首页</a>
+					<a href="我有好多话.html">课程红黑榜</a>
+					<a href="我也想回答.html">我也想回答</a>
+					<a href="我有好多课.html">我有好多课</a>
+				</h6>
+				<h6 style="color:#c9c2a79b ;">中传课程评价系统</h6><br>
+			</div>
+			<div class="col-md-4 pt-3 pb-3" style="padding-left:3rem;">
+				<h6 style="padding-bottom:1rem"><i class="bi bi-geo-alt-fill"><span style="padding-left: 1rem;">定福庄东街一号：中国传媒大学</span></i></h6>
+				<h6 style="padding-bottom:1rem"><i class="bi bi-telephone-fill"></i><span style="padding-left: 1rem;">国家“双一流”建设高校</span></h6>
+				<h6 style="padding-bottom:1rem"><i class="bi bi-envelope-fill"><span style="padding-left: 1rem;">国家“211工程”重点建设高校</span></i></h6>
+
+			</div>
+			<div class="col-md-4 pt-3 pb-4" style="padding-left:3rem;padding-right:3rem;">
+				<h5>关键词</h5>
+				<h6 style="color:#c9c2a79b ;padding-bottom: 1rem;font-family:SimSun">真实、可靠、有效、互助。</h6>
+
+		</div>
+	</div>
+</div></footer>
+<!-- end #footer -->
+</body>
+<script src="script.js"></script>
+
+</html>
