@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    fieldset {
+      width: 400px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button{
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: orange;
+    }
+  </style>
+ <script src="puzzle.js"></script>
+</head>
+
+<body>
+
+<h1 style="padding:30px;text-align:center"> 超级准的心理小测试！！</h1>
+
+
+<fieldset class ="question">
+<p id="q1">1.习惯的手表类型</p>
+<label for="q1a"><input id="q1a" type="radio" name="q1"/>钟表型</label>
+<br/>
+<label for="q1b"><input id="q1b" type="radio" name="q1"/>电子型</label>
+<img src="q1.jpg" width="400" height="136">
+</fieldset>
+
+<fieldset class ="question">
+<p id="q2">2.定闹钟</p>
+<label for="q2a"><input id="q2a" type="radio" name="q2"/>多个</label>
+<br/>
+<label for="q2b"><input id="q2b" type="radio" name="q2"/>一个</label>
+<img src="q2.jpg" width="400" height="136">
+</fieldset>
+
+<fieldset class ="question">
+<p id="q3">3.吃苹果方式</p>
+<label for="q3a"><input id="q3a" type="radio" name="q3"/>整个啃</label>
+<br/>
+<label for="q3b"><input id="q3b" type="radio" name="q3"/>切块</label>
+<img src="q3.jpg" width="400" height="136">
+</fieldset>
+
+<fieldset class ="question">
+<p id="q4">4.吃饭习惯</p>
+<label for="q4a"><input id="q4a" type="radio" name="q4"/>先吃饭</label>
+<br/>
+<label for="q4b"><input id="q4b" type="radio" name="q4"/>先喝汤</label>
+<img src="q4.jpg" width="400" height="136">
+</fieldset>
+
+<fieldset class ="question">
+<p id="q5">5.摆书习惯</p>
+<label for="q5a"><input id="q5a" type="radio" name="q5"/>高低摆</label>
+<br/>
+<label for="q5b"><input id="q5b" type="radio" name="q5"/>随意</label>
+<img src="q5.jpg" width="400" height="136">
+</fieldset>
+
+<fieldset class ="question">
+<p id="q6">6.吃薯条</p>
+<label for="q6a"><input id="q6a" type="radio" name="q6"/>沾着酱吃</label>
+<br/>
+<label for="q6b"><input id="q6b" type="radio" name="q6"/>把酱挤上去吃</label>
+<img src="q6.jpg" width="400" height="136">
+</fieldset>
+
+<fieldset class ="question">
+<p id="q7">7.吃玉米</p>
+<label for="q7a"><input id="q7a" type="radio" name="q7"/>从头</label>
+<br/>
+<label for="q7b"><input id="q7b" type="radio" name="q7"/>从尾</label>
+<img src="q7.jpg" width="400" height="136">
+</fieldset>
+
+<fieldset class ="question1">
+<p id="q8">8.口渴时会喝什么饮品</p>
+<label><input type="radio" name="q8" value="A"/>汽水、碳酸饮料</label>
+<br/>
+<label ><input type="radio" name="q8" value="B"/>果汁类</label>
+<br/>
+<label><input type="radio" name="q8" value="C">奶茶类</label>
+<br/>
+<label><input type="radio" name="q8" value="D">水</label>
+<img src="q8.jpg" width="400" height="283">
+</fieldset>
+
+
+<fieldset>
+<button onclick="checkAnswer('q8')">Submit</button>
+</fieldset>
+</body>
+
+</html>
